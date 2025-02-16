@@ -52,7 +52,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: Tests Robot
+        name: Chrome Tests Robot
         path: logs
 
   firefox:
@@ -100,5 +100,5 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: Tests Robot
+        name: Firefox Tests Robot
         path: logs
