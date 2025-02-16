@@ -39,7 +39,7 @@ jobs:
       run: rfbrowser init        
 
     - name: Tests E2E Robot
-      run: robot -d ./logs -i smoke tests   
+      run: robot -d ./logs tests   
       
     - name: Robot Reporter
       uses: joonvena/robotframework-reporter-action@v2.5
