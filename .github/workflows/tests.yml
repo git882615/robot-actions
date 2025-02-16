@@ -14,18 +14,29 @@ jobs:
     steps:
     - name: Get Code
       uses: actions/checkout@v4
+
     - name: Use Node.js 20
       uses: actions/setup-node@v4
       with:
         node-version: 20
+
     - name: Setup Python
       uses: actions/setup-python@v5.4.0
       with:
         python-version: 3.12
+
     - name: Tests of installations 
       run: |
         node --version
         python --version   
+
+    - name: Install dependencies 
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Init Library Browser
+      run: rfbrowser init        
 
               
 
